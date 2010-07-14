@@ -17,6 +17,7 @@
     <include collection="metadata.comment"/>
     <include collection="literal.string.heredoc"/>
     <include collection="keyword.control"/>
+    <include collection="keyword.method"/>
     <include collection="literal.keyword"/>
     <include collection="container.block"/>
     <include collection="container.function"/>
@@ -856,6 +857,20 @@
       </zone>
       <zone name="delimiter.balanced.square-brace.end">
         <expression>\]</expression>
+      </zone>
+    </collection>
+
+    <!-- ==============
+         =  Methods =
+         ============== -->
+    
+
+    <collection name="keyword.method">
+      <zone name="keyword.method.array">
+        <starts-with>
+          <expression>(?=\.)</expression>
+        </starts-with>
+        <expression>\.abbrev\b|\.assoc\b|\.at\b|\.clear\b|\.collect\b|\.collect!\b|\.combination\b|\.compact\b|\.compact!\b|\.concat\b|\.count\b|\.cycle\b|\.dclone\b|\.delete\b|\.delete_at\b|\.delete_if\b|\.drop\b|\.drop_while\b|\.each\b|\.each_index\b|\.empty?\b|\.eql?\b|\.fetch\b|\.fill\b|\.find_index\b|\.first\b|\.flatten\b|\.flatten!\b|\.frozen?\b|\.hash\b|\.include?\b|\.index\b|\.initialize_copy\b|\.insert\b|\.inspect\b|\.join\b|\.last\b|\.length\b|\.map\b|\.map!\b|\.new\b|\.pack\b|\.permutation\b|\.pop\b|\.pretty_print\b|\.pretty_print_cycle\b|\.product\b|\.push\b|\.rassoc\b|\.reject\b|\.reject!\b|\.replace\b|\.reverse\b|\.reverse!\b|\.reverse_each\b|\.rindex\b|\.sample\b|\.select\b|\.shelljoin\b|\.shift\b|\.shuffle\b|\.shuffle!\b|\.size\b|\.slice\b|\.slice!\b|\.sort\b|\.sort!\b|\.take\b|\.take_while\b|\.to_a\b|\.to_ary\b|\.to_csv\b|\.to_s\b|\.to_s\b|\.to_yaml\b|\.transpose\b|\.try_convert\b|\.uniq\b|\.uniq!\b|\.unshift\b|\.values_at\b|\.yaml_initialize\b|\.zip\b</expression>
       </zone>
     </collection>
     
